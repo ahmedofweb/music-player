@@ -133,7 +133,6 @@ function updateSong() {
 function prog(e) {
     let duration = e.srcElement.duration 
     let currentTime = e.srcElement.currentTime
-
     // time end progress
     let endMin = Math.floor(duration /  60)
     let endSec = Math.floor(duration - endMin*60)
@@ -153,11 +152,12 @@ function prog(e) {
     // text contentiga qoshish
     progress.style.width = `${(currentTime / duration) * 100}%`
 
-
-
-
+    if (startMin == endMin){
+        if (startSec == endSec){
+            nextSong()
+        }
+    }
 }
-
 function setProg(e) {
    let duration = audio.duration 
    let offsetX = e.offsetX
