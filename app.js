@@ -23,6 +23,7 @@ const progress = document.querySelector(".progress")
 const volume = document.querySelector("#volume")
 const volumeForm = document.querySelector(".volume-form")
 const spanVolume = document.querySelector("#span-volume")
+const volumeIcon = document.querySelector("#volume-icon")
 
 // container animation uchun
 const container = document.querySelector(".container")
@@ -35,6 +36,14 @@ const songs = [
     "Heather - Conan Gray",
     "Osmonlarda - Xamdam Sobirov",
     "U okna - HammAli & Navai",
+    "Cжигая дотла - Jah Khalib",
+    "Доча - Jah Khalib",
+
+    "На грани - JANAGA и Севак",
+    "Save your tears - The weekend",
+    "Metro Boomin",
+    "В комнате мрак - JANAGA",
+    "Брату - Jah Khalib"
 ];
 
 let songIndex = 1
@@ -80,6 +89,9 @@ volume.addEventListener("input", () => {
     }
 })
 
+volumeIcon.addEventListener("click", () => {
+    volumeIcon.classList.toggle()
+})
 
 
 // function 
